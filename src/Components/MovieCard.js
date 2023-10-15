@@ -2,6 +2,7 @@ import React from 'react';
 import { CardHeader } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   return (
@@ -15,6 +16,7 @@ const MovieCard = ({ movie }) => {
         {movie.description}
         </Card.Text>
         <Button variant="primary">Rating: {movie.rating}</Button>
+        <Link to={`/movies/${movie.title}`} className="btn btn-primary">View Details</Link>
       </Card.Body>
     </Card>
     // </div>
